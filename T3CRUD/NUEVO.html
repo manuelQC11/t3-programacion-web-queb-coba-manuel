@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:600&display=swap" rel="stylesheet">
+    <title>CRUDT3</title>
+</head>
+<body  >
+    <header style="background: rgb(117, 158, 235);" class="header" id="header">
+                <h1  class="TITULO" >TU LINEA DIRECTA A TU DESTINO  </h1>
+      
+            </header>
+    <br/>
+            <form  class="form" onsubmit="event.preventDefault();onSubmit();" autocomplete="off">
+               
+              <br/>
+              <br/>
+              
+              <div class="cuadro_">
+                <label for="nom">Nombre</label>
+                 <input type="text" id="nom"  required>
+                <label for="ape">Apellido</label>
+                 <input type="text" id="ape"  required>
+                <label for="origen">Origen</label>
+                <input type="text" id="origen"  required>
+                <label for="destino">Destino</label>
+                <input type="text" id="destino"  required>
+              </div>
+              <br/>
+              <input class="submit" type="submit" value="INGRESAR DATOS">
+              
+            </form>
+        <br/>
+        <br/>
+   <footer class="footer" id="footer">
+       <div class="tablit">
+                <table class="tabla" id="tabla">
+                  <thead>
+                    <tr> 
+                      <th>Nombre</th> 
+                      <th>Apellido</th>
+                      <th>Origen</th>
+                      <th>Destino</th>
+                      <th id="opc" >Opciones</th>
+                    </tr>
+                  </thead>
+                    <tbody>
+      
+                    </tbody>
+                </table>
+              </div>
+   </footer>
+</body>
+<script type="text/javascript" src="js/CRD.js"></script>
+</html>

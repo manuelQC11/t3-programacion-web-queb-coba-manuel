@@ -23,8 +23,8 @@ function InsertarDatos(data) {
     columna2 = Fila.insertCell(1).innerHTML = data.ape
     columna3 = Fila.insertCell(2).innerHTML = data.origen
     columna4 = Fila.insertCell(3).innerHTML = data.destino
-    columna5 = Fila.insertCell(4).innerHTML = `<input class="edt" type="button"   onClick="Editarr(this)" value="Editar" >
-                                            <input class="borr" type="button" onClick="Borrarr(this)"  value="Borrar" >`
+    columna5 = Fila.insertCell(4).innerHTML = `<input class="edt" type="button"   onClick="Edit(this)" value="Editar" >
+                                            <input class="borr" type="button" onClick="Bor(this)"  value="Borrar" >`
     document.getElementById("nom").focus()
     Vaciar()
 }
@@ -35,7 +35,7 @@ function Vaciar() {
     document.getElementById("destino").value = ""
     Fila = null
 }
-function Editarr(td) {
+function Edit(td) {
     Fila = td.parentElement.parentElement
     document.getElementById("nom").value = Fila.cells[0].innerHTML
     document.getElementById("ape").value = Fila.cells[1].innerHTML
@@ -49,7 +49,7 @@ function Actualizar(DataForm) {
     Fila.cells[3].innerHTML = DataForm.destino
     document.getElementById("nom").focus()
 }
-function Borrarr(td) {
+function Bor(td) {
     if (confirm('¿Seguro de borrar este registro?')) {
         row = td.parentElement.parentElement
         document.getElementById("tabla").deleteRow(row.rowIndex)
